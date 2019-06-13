@@ -1,6 +1,6 @@
 Akash and Vishal are quite fond of travelling. They mostly travel by railways. They were travelling in a train one day and they got interested in the seating arrangement of their compartment. The compartment looked something like 
 
-![Seating arrangement Image]{https://he-s3.s3.amazonaws.com/media/uploads/a2e0794.jpg}
+![Seating arrangement Image](https://he-s3.s3.amazonaws.com/media/uploads/a2e0794.jpg)
 
 So they got interested to know the seat number facing them and the seat type facing them. The seats are denoted as follows: 
 
