@@ -4,6 +4,7 @@ Akash and Vishal are quite fond of travelling. They mostly travel by railways. T
 
 So they got interested to know the seat number facing them and the seat type facing them. The seats are denoted as follows: 
 
+
 ```
 Window Seat : WS
 Middle Seat : MS
