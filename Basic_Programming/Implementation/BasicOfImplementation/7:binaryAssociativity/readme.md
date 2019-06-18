@@ -3,12 +3,12 @@ x,y,z in S.
 
 For the binary set S= {0,1} and a particular binary operator ∗ , you are given its truth table. Determine if the operation is associative.
 ```
-|a|b|a * b|
-|:--- |:---:|:---:|
-|0|0|c0|
-|0|1|c1|
-|1|0|c3|
-|1|1|c4|
+|  a  |  b  | a * b |
+| --- | --- | ----- |
+|  0  |  0  |   c0  |
+|  0  |  1  |   c1  |
+|  1  |  0  |   c3  |
+|  1  |  1  |   c4  |
 
 Input format
 
