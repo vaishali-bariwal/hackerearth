@@ -11,7 +11,6 @@ class TestClass {
         int n = Integer.parseInt(nk[0]);
         int k = Integer.parseInt(nk[1]);
         int j = 1;
-        System.out.println(k);
         int a[] = new int[n+1];
 
         while( j < k+1)
@@ -30,9 +29,10 @@ class TestClass {
             String xy[] = br.readLine().split(" ");
             int x = Integer.parseInt(xy[0]);
             int y = Integer.parseInt(xy[1]);
-            int diff = a[x] - a[y];
-            System.out.println(Math.abs(diff));
-            q--;
+            int diff1 = k-Math.abs(a[x]-a[y]);
+            int diff = Math.abs(a[x]-a[y]);
+            System.out.println(Math.min(diff,diff1));
+             q--;
         }
     }
 }
