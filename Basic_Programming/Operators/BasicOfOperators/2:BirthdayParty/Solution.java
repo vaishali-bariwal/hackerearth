@@ -14,8 +14,9 @@ class TestClass {
             String nm[] = br.readLine().split(" ");
             int n = Integer.parseInt(nm[0]);
             int m = Integer.parseInt(nm[1]);
-            if(m % n == 0) System.out.println("Yes");
-            else System.out.println("No");
+            if(m % n == 0) out.write("Yes");
+            else out.write("No");
+            out.flush();
         }
     }
 }
