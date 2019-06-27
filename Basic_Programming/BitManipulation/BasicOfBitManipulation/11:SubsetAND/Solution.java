@@ -21,17 +21,9 @@ class TestClass {
             String set[] = br.readLine().split(" ");
             for(int i =0;i<n;i++)
                 s[i] = Integer.parseInt(set[i]);
-            for(int i = 0;i < (1 << n); i++)
+            for(int j = 0;j < n;j++)
             {
-                for(int j = 0;j < n;j++)
-                {
-                    //System.out.println("i = "+i+"j = "+j+"  & "+ (i & (1 << j)));
-                    if((i & (1 << j))!=0)
-                    {
-                        and = and & s[j];
-                    }
-                }
-                System.out.println();
+                and = and & s[j];
                 if(and == 0)
                 {
                     check = true;
