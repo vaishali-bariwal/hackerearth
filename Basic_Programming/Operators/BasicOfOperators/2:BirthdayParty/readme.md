@@ -21,9 +21,11 @@ SAMPLE INPUT
 2
 5 14
 3 21
+
 SAMPLE OUTPUT 
 No
 Yes
+
 Explanation
 Test Case 1:
 There is no way such that he can distribute 14 chocolates among 5 friends equally. 

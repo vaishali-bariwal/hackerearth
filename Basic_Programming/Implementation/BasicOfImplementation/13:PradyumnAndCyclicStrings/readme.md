@@ -61,8 +61,10 @@ Number of rotations required to vanish the Bit String.
 SAMPLE INPUT 
 1
 1
+
 SAMPLE OUTPUT 
 1
+
 Explanation
 Rotating Bit String first time, changes it to 1.
 Now, middle character of unit length string is first character of the string.
