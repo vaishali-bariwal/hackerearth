@@ -7,7 +7,7 @@ i
 ≤
 N
 
-Now, Monk will proceed further when you solve this one. So, go on and solve it :)
+Now, Monk will be proceed further when you solve this one. So, go on and solve it :)
 
 Input:
 First line consists of an integer N, denoting the size of A and B.
