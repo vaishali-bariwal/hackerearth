@@ -14,7 +14,6 @@ class TestClass {
             nstr = br.readLine();
             if(nstr.length() != 0)
             {
-                System.out.println("kkk"+nstr);
                 long n = Long.parseLong(nstr);
                 long count = 0;
                 if(isPowerOfTwo(n))
