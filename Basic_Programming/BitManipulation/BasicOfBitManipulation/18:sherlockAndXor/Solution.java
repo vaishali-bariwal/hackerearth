@@ -13,21 +13,19 @@ class TestClass {
         while(t-- > 0)
         {
             int n = Integer.parseInt(br.readLine());
-            int a[] = new int[n] , count = 0,xor = 0;
+            int a[] = new int[n] ;
+            long count = 0;
             String arr[] = br.readLine().split(" ");
             for(int i = 0; i < n;i++)
-                a[i] = Integer.parseInt(arr[i]);
-            for(int i = 0;i < (1 << n); ++i)
             {
-                xor = 0;
-                for(int j = 0;j < n;++j)
+                a[i] = Integer.parseInt(arr[i]);
+                if((a[i]&1)==0)
                 {
-                    if((i & (1 << j)) != 0)
-                        xor = xor ^ a[j];
+                    count++;
                 }
-                if((xor&1) == 1) count++;
             }
-            sb.append(count/2+"\n");
+            count = (n-count)*count;
+            sb.append(count+"\n");
         }
         System.out.println(sb);
     }
