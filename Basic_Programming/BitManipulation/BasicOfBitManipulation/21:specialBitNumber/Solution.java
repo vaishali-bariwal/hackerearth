@@ -12,34 +12,41 @@ class TestClass {
         int q = Integer.parseInt(nq[1]);
         String arr[] = br.readLine().split(" ");
         int a[] = new int[n];
-        boolean cons_bit[] = new boolean[n];
+        int count = 0, bitcount[] = new int[n];
         for(int i = 0;i < n;i++)
         {
             a[i] = Integer.parseInt(arr[i]);
-            cons_bit[i] = bitcheck(a[i]);
+            if(bitcheck(a[i]))
+                bitcount[i] = ++count;
+            else
+                bitcount[i] = count;
         }
-        for(int i = 0;i < q;i++)
+        while(q-- > 0)
         {
-            int count = 0;
             String[] lr = br.readLine().split(" ");
             int l = Integer.parseInt(lr[0])-1;
             int r = Integer.parseInt(lr[1])-1;
-            for(int j = l;j <= r;j++)
+            /*for(int j = l;j <= r;j++)
             {
-                if(cons_bit[j]) count++;
+                if(bitcheck(a[j])) count++;
+            }*/
+            if(l==0)
+            {
+                sb.append(bitcount[r]+"\n");
             }
-            sb.append(count+"\n");
+            else
+            {
+               sb.append((bitcount[r] - bitcount[l-1])+"\n");
+            }
         }
         System.out.println(sb);
     }
     public static boolean bitcheck(int n)
     {
         int count = 0;
-        for(int i = 1;i < 32;i++)
-        {
-            if( (n & (1<<(i-1))) != 0 && (n & (1<<i)) != 0 )
+        if( (n &(n >>> 1)) != 0 )
             return true;
-        }
-        return false;
+        else
+            return false;
     }
 }
