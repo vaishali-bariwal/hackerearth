@@ -16,17 +16,18 @@ class TestClass {
             int n = Integer.parseInt(br.readLine());
             int a[] = new int[n];
             String str[] = br.readLine().split(" ");
-            HashMap<Integer,Integer> hm = new HashMap<>();
+            ArrayList<bitCount> al = new ArrayList<>();
             for(int i=0;i<n;i++)
             {
                 a[i] = Integer.parseInt(str[i]);
-                hm.put(a[i],count_one(a[i]));
+                bitCount b = new bitCount(a[i]);
+                b.bit_Count = count_one(a[i]);
+                al.add(b);
             }
-            ArrayList<Integer> al = new ArrayList<>(hm.values());
             Collections.sort(al);
-            for(Map.Entry m : hm.entrySet())
+            for( bitCount i : al)
             {
-                sb.append(m.getKey()+" ");
+                sb.append(i.num +" ");
             }
             sb.append("\n");
         }
@@ -42,4 +43,17 @@ class TestClass {
         }
         return count;
     }
+    static class bitCount implements Comparable<bitCount>
+    {
+        int num;
+        int bit_Count;
+        public bitCount(int n)
+        {
+            this.num = n;
+        }
+    public int compareTo(bitCount t)
+    {
+        return this.bit_Count - t.bit_Count;
+    }
+}
 }
