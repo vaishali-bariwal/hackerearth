@@ -51,6 +51,8 @@ B
 )
 =
 C
+Where b = c - b,
+
 . It is guaranteed that there is unique such set.
 
 Input Format
