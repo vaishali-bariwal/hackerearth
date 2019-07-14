@@ -6,7 +6,7 @@ class TestClass {
     public static void main(String args[] ) throws Exception {
        
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();                // Reading input from STDIN
+                        // Reading input from STDIN
         int n = Integer.parseInt(br.readLine());
         String[] arrA = br.readLine().split(" ");
         int a[] = new int[n];
