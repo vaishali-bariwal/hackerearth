@@ -1,22 +1,29 @@
-A project was going on related to image processing and to perform experiments and get desired result the image needs to be converted to Gray-Scale using a parameter 'x' and the function P(x) represented the Gray-Code and calculated via x xor (x div 2) where xor stands for bitwise exclusive OR (bitwise modulo 2 addition), and div means integer division.
-
-It is interesting to note that function P(x) is invertible, which means it is always possible to uniquely restore x given the value of P(x).
-
-So the group working on the project forgot to keep the original data related to parameter 'x'. Write a program to restore number x from the given value of P(x).
-
-INPUT:
-The input file contains an integer number y, the value of G(x).
-
-OUTPUT:
-The output file should contain a single integer x such that G(x) = y.
-
-CONSTRAINTS:
-0 ≤ x,P(x) ≤ 
-10
-9
-.
-
-SAMPLE INPUT 
-15
-SAMPLE OUTPUT 
-10
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class code
+{
+    public static long largest_power(long N)
+    {
+        N = N| (N>>1);
+        N = N| (N>>2);
+        N = N| (N>>4);
+        N = N| (N>>8);
+        N = N| (N>>16);
+        
+        return (N+1)>>1;
+    }
+    public static void main (String[] args) throws java.lang.Exception
+	{
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter pw=new PrintWriter(System.out);
+        int N=Integer.parseInt(br.readLine());
+        int Ans=(int)largest_power(N);
+        int bits=(int)(Math.log(N)/Math.log(2))+1;
+        for(int i=bits;i>0;i--)
+            if(((((1<<i)&Ans)!=0?1:0)^(((1<<i-1)&N)!=0?1:0))==1)
+                Ans=(1<<(i-1))|Ans;
+        pw.println(Ans);
+        pw.flush();
+	}
+}
