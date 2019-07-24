@@ -8,45 +8,45 @@ class TestClass {
         PrintWriter wr = new PrintWriter(System.out);
          int n = Integer.parseInt(br.readLine().trim());
          String[] arr_A = br.readLine().split(" ");
-         int[] A = new int[n];
-         for(int i_A=0; i_A<arr_A.length; i_A++)
+         int[] a = new int[n];
+        StringBuilder sb1 = new StringBuilder();
+        StringBuilder sb2 = new StringBuilder();
+         for(int i=0; i< n; i++)
          {
-         	A[i_A] = Integer.parseInt(arr_A[i_A]);
+         	a[i] = Integer.parseInt(arr_A[i]);
+            if(isPrime(a[i]))
+                {
+                    sb1.append(a[i]+" ");
+                    a[i] = 0;
+                }
          }
-         
-         StringBuilder[] sb = queue_and_stack(A);
-         System.out.println(sb[0]);
-         String s[] = sb[1].toString().split(" ");
-         for (int i = s.length - 1; i >= 0; i--) {
-             wr.write(s[i]+" ");
+         for(int i = n-1;i >=0;i--)
+         {
+            if(a[i]!=0)
+            {
+                sb2.append(a[i]+" ");
+            }
          }
+         System.out.println(sb1);
+         System.out.println(sb2);
          wr.close();
          br.close();
     }
-    static StringBuilder[] queue_and_stack(int[] a){
-        // Write your code here
-        int n = a.length;
-        StringBuilder[] sb = new StringBuilder[2];
-        sb[0] = new StringBuilder("");
-        sb[1] = new StringBuilder("");
-        for(int i = 0; i < n;i++)
-        {
-            if(isPrime(a[i]))
-            {
-                sb[0].append(a[i]+" ");
-            }
-            else
-            {
-               sb[1].append(a[i]+" ");
-            }
-        }
-        return sb;
-    }
+ 
     static boolean isPrime(int n) 
-    { 
-        // Check from 2 to n-1 
-        for (int i = 2; i <= n/2; i++) 
-            if (n % i == 0) 
+    {
+        if (n <= 1) 
+            return false; 
+        if (n <= 3) 
+            return true; 
+  
+        // This is checked so that we can skip 
+        // middle five numbers in below loop 
+        if (n % 2 == 0 || n % 3 == 0) 
+            return false; 
+  
+        for (int i = 5; i * i <= n; i = i + 6) 
+            if (n % i == 0 || n % (i + 2) == 0) 
                 return false; 
   
         return true; 
