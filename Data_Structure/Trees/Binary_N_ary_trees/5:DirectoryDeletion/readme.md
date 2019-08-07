@@ -110,4 +110,4 @@ SAMPLE OUTPUT
 Explanation
 In the image below is the complete directory tree. If you delete the directories 2 and 3, 4 gets automatically deleted, thus you need to delete only 2 directories. 
 
-[!img tree image](https://he-s3.s3.amazonaws.com/media/uploads/895b3e7b-5947-46f7-a016-ddfc6f0a447f.png)
+![tree image](https://he-s3.s3.amazonaws.com/media/uploads/895b3e7b-5947-46f7-a016-ddfc6f0a447f.png)
