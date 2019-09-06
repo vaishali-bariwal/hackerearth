@@ -16,7 +16,6 @@ class TestClass {
         {
             a[i] = Integer.parseInt(br.readLine());
         }
-        heapsort(a,n);
         for (int i = 0; i < n; i++) {
             if(i < 2)
             {
@@ -24,8 +23,14 @@ class TestClass {
             }
             else
             {
-                int j = i;
-                sb.append(a[j]+" "+a[j-1]+" "+a[j-2]+"\n");
+                heapsort(a,i+1);
+                int c = 0;
+                for(int l = i;c!=3&&l >= 0;l--)
+                {
+                    sb.append(a[l]+" ");
+                    c++;
+                }
+                sb.append("\n");
             }
         }
         System.out.println(sb);

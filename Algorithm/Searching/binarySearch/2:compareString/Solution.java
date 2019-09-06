@@ -37,4 +37,3 @@ class CompareString{
         scan.close();
     }
 }
-Language: Java 8

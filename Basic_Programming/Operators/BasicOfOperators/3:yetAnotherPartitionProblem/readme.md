@@ -1,28 +1,12 @@
-You are given an array of 
-N
- integers. The task is to partition the array into an arbitrary number of groups (subarrays) such that bitwise 
-A
-N
-D
- of beauties of the groups is maximized.
-
-The beauty of a group (subarray) is defined by the bitwise 
-X
-O
-R
- of all the numbers belonging to that group (subarray).
-
- 
+You are given an array of N integers. The task is to partition the array into an arbitrary number of groups (subarrays) such that bitwise AND of beauties of the groups is maximized.
+The beauty of a group (subarray) is defined by the bitwise XOR of all the numbers belonging to that group (subarray).
 
 Input format
 
-First line of the input contains the number of test cases 
-T
- .
+First line of the input contains the number of test cases T.
 
 Each test case has 2 lines. First line of the test case is the size of the array 
-N
-. Second line has the array elements separated by space.
+N. Second line has the array elements separated by space.
 
  
 

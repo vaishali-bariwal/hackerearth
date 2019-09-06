@@ -11,7 +11,7 @@ class TestClass {
         String[] s=br.readLine().split(" ");
         StringBuilder sb=new StringBuilder();
         int n=s.length;
-         
+        Stack<Long> s = new Stack<>();
         Stack<String> st=new Stack<String>();
         for(int i=n-1;i>0;i--)
         {
