@@ -1,0 +1,1 @@
+find all subarray of Array without any specification.
