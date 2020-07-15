@@ -18,6 +18,7 @@ class TestClass {
              m = Integer.parseInt(arr[1]);
              c = arr[2];
              String str = Integer.toBinaryString(n);
+             
              if(str.length() < 16)
              {
                  int ad = 16 - str.length();
